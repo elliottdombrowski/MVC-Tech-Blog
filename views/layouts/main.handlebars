@@ -5,10 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Tech Blog!</title>
-    <link rel="/css/jass.css">
-    <link rel="/css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <h2>testing yo yo hi</h2>
+    <header class="main-header">
+        {{!-- TODO- THINK OF BETTER NAME  --}}
+        <nav class="nav-left">tech blog</nav>
+        <nav class="nav-right">
+            <a href="/" class="nav-item">blog</a>
+            {{#if logged_in}}
+            <a href="/" id="sign-out-button" class="nav-item login-logout">log out</a>
+            {{/if}}
+            <a href="/login" class="nav-item login-logout">log in</a>
+        </nav>
+    </header>
+
+    {{!-- RENDER COMPONENTS HERE  --}}
+    {{{body}}}
+
 </body>
 </html>
