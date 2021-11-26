@@ -10,7 +10,7 @@
 <body>
     <header class="main-header">
         {{!-- TODO- THINK OF BETTER NAME  --}}
-        <nav class="nav-left">tech blog</nav>
+        <nav class="nav-left"><a href="/" class="nav-item">tech blog</a></nav>
         <nav class="nav-right">
             <a href="/" class="nav-item">blog</a>
             {{#if logged_in}}
@@ -23,5 +23,10 @@
     {{!-- RENDER COMPONENTS HERE  --}}
     {{{body}}}
 
+
+    <script src="../../public/js/script.js"></script>
+    {{#if logged_in}}
+    <script src="../../public/js/logout.js"></script>
+    {{/if}}
 </body>
 </html>

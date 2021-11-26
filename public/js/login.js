@@ -1,8 +1,8 @@
-const loginFormHandler = async (event) => {
-    event.preventDefault();
+const loginFormHandler = async (e) => {
+    e.preventDefault();
 
-    const email = document.querySelector('').value.trim();
-    const password = document.querySelector('').value.trim();
+    const email = document.querySelector('#log-in-email').value.trim();
+    const password = document.querySelector('#log-in-password').value.trim();
 
     if(email && password) {
         const response = await fetch('/api/users/login', {
@@ -12,29 +12,30 @@ const loginFormHandler = async (event) => {
         });
 
         if(response.ok) {
-            document.location.replace('./profile');
+            document.location.replace('/');
         } else {
             alert(response.statusText);
         }
     }
 };
 
-const signupFormHandler = async (event) => {
-    event.preventDefault();
+const signupFormHandler = async (e) => {
+    e.preventDefault();
 
-    const name = document.querySelector('').value.trim();
-    const email = document.querySelector('').value.trim();
-    const password = document.querySelector('').value.trim();
+    const first_name = document.querySelector('#sign-up-fname').value.trim();
+    const last_name = document.querySelector('#sign-up-lname').value.trim();
+    const email = document.querySelector('#sign-up-email').value.trim();
+    const password = document.querySelector('#sign-up-password').value.trim();
 
-    if(name && email && password) {
+    if(first_name && last_name && email && password) {
         const response = await fetch('/api/users', {
             method: 'POST',
-            body: JSON.stringify({ name, email, password }),
+            body: JSON.stringify({ first_name, last_name, email, password }),
             headers: { 'Content-Type': 'application/json'},
         }); 
 
         if(response.ok) {
-            document.location.replace('/profile');
+            document.location.replace('/');
         } else {
             alert(response.statusText);
         }
@@ -42,9 +43,9 @@ const signupFormHandler = async (event) => {
 };
 
 document
-    .querySelector('')
-    .addEventListener('', loginFormHandler);
+    .querySelector('#login-form')
+    .addEventListener('submit', loginFormHandler);
 
 document
-    .querySelector('')
-    .addEventListener('', signupFormHandler);
+    .querySelector('#signup-form')
+    .addEventListener('submit', signupFormHandler);
