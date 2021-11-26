@@ -21,6 +21,7 @@ const loginFormHandler = async (e) => {
 
 const signupFormHandler = async (e) => {
     e.preventDefault();
+    console.log('hitting sign up form handler');
 
     const first_name = document.querySelector('#sign-up-fname').value.trim();
     const last_name = document.querySelector('#sign-up-lname').value.trim();

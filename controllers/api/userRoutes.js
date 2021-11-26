@@ -13,6 +13,22 @@ router.get('/', async (req, res) => {
     }
 });
 
+router.post('/', async (req, res) => {
+    console.log('hitting route');
+    try {
+        console.log('hitting try/catc');
+        const userData = await User.create(req.body);
+
+        req.session.save(() => {
+            req.session.id = userData.id;
+            req.session.logged_in = true;
+            res.status(200).json(userData);
+        });
+    } catch (err) {
+        res.status(400).json(err);
+    }
+});
+
 router.post('/login', async (req, res) => {
     try {
         const userData = await User.findOne({where: {email: req.body.email}});
