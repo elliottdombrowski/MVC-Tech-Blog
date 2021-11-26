@@ -3,27 +3,28 @@
     padding: 0;
 }
 
-:root {
+body {
+    /* align-items: center;
+    background: var(--white);
+    background: var(--gray);
+    display: grid; */
+    height: 100vh;
+    /* place-items: center; */
+}
+
+/* :root {
     --white: #e9e9e9;
     --gray: #333;
     --blue: #0367a6;
     --lightblue: #008997;
-
+    
     --button-radius: 0.7rem;
-
+    
     --max-width: 758px;
     --max-height: 420px;
     font-size: 16px;
 }
 
-body {
-    align-items: center;
-    background: var(--white);
-    background: var(--gray);
-    display: grid;
-    height: 100vh;
-    place-items: center;
-}
 
 .form__title {
     font-weight: 300;
@@ -163,7 +164,7 @@ body {
 
 .btn:focus {
     outline: none;
-}
+} */
 
 
 
