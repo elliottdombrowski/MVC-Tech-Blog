@@ -1,3 +1,5 @@
+console.log('help pls'); 
+
 const newFormHandler = async (event) => {
     event.preventDefault();
 
@@ -14,7 +16,7 @@ const newFormHandler = async (event) => {
             },
         }),
 
-        if(response.ok) {
+        if (response.ok) {
             document.location.replace('/profile');
         } else {
             alert('Failed to create project');
@@ -23,14 +25,14 @@ const newFormHandler = async (event) => {
 };
 
 const delButtonHandler = async (event) => {
-    if(event.target.hasAttribute('')) {
+    if (event.target.hasAttribute('')) {
         const id = event.target.getAttribute('');
 
         const response = await fetch(`/api/projects/${id}`, {
             method: 'DELETE',
         });
 
-        if(response.ok) {
+        if (response.ok) {
             document.location.replace('/profile');
         } else {
             alert('Failed to delete project');
