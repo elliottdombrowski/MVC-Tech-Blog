@@ -16,7 +16,7 @@ router.get('/', async (req, res) => {
 router.post('/', async (req, res) => {
     console.log('hitting route');
     try {
-        console.log('hitting try/catc');
+        console.log('hitting try/catch'); 
         const userData = await User.create(req.body);
 
         req.session.save(() => {
