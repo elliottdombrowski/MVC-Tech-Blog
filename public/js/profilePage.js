@@ -1,5 +1,4 @@
-const handleProfileData = () => {
-    console.log('yo yo yo bitches');
+const handleProfileData = (e) => {
 };
 
 document.getElementById('profile-deets').addEventListener('click', handleProfileData);
