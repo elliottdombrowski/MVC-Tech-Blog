@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Tech Blog!</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="main-header">
+        <!-- {{!-- TODO- THINK OF BETTER NAME  --}} -->
+        <nav class="nav-left"><a href="/" class="nav-item">tech blog</a></nav>
+        <nav class="nav-right">
+            <a href="/" class="nav-item">blog</a>
+            <!-- {{#if logged_in}}
+            <a href="/" id="sign-out-button" class="nav-item login-logout">log out</a>
+            {{else}} -->
+            <a href="/login" class="nav-item login-logout">log in</a>
+            <!-- {{/if}} -->
+        </nav>
+    </header>
+
+    <!-- {{!-- RENDER COMPONENTS HERE  --}}
+    {{{body}}} -->
+
+    <script src="/js/profile.js"></script>
+    <!-- {{#if logged_in}} -->
+    <script src="/js/logout.js"></script>
+    <!-- {{/if}} -->
+</body>
+</html>
