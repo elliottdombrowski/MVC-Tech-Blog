@@ -17,6 +17,7 @@ const PORT = process.env.PORT || 3001;
 const hbs = exphbs.create();
 
 // COOKIES STUFF
+//adding a comment here so heroku will let me deploy
 const oneHr = 1000 * 60 * 60 * 1;
 const sess = {
     secret: 'SUPER secret secret secret',
