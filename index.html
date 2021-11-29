@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MVC Tech Blog</title>
     <link rel="stylesheet" href="public/css/style.css">
+    <script src="https://kit.fontawesome.com/52d65b95b5.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header class="main-header">
         <!-- {{!-- TODO- THINK OF BETTER NAME  --}} -->
         <nav class="nav-left"><a href="/" class="nav-item">tech blog</a></nav>
         <nav class="nav-right">
-            <a class="nav-item">blog</a>
+            <a class="nav-item">profile</a>
             <!-- {{#if logged_in}}
             <a href="/" id="sign-out-button" class="nav-item login-logout">log out</a>
             {{else}} -->
@@ -21,6 +22,27 @@
         </nav>
     </header>
 
+    <section class="profile-page">
+        <nav class="profile-nav">
+            <ul class="profile-icons">
+                <li class="profile-item">
+                    <a href="/">
+                        <i class="fas fa-user-circle fa-2x login-logout"></i>
+                    </a>
+                </li>
+                <li class="profile-item">
+                    <a href="/">
+                        <i class="fas fa-plus-circle fa-2x login-logout"></i>
+                    </a>
+                </li>
+                <li class="profile-item">
+                    <a href="/">
+                        <i class="fas fa-th-large fa-2x login-logout"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </section>
     <!-- {{!-- RENDER COMPONENTS HERE  --}}
     {{{body}}} -->
 

@@ -8,11 +8,14 @@
 :root {
     --dmsans: 'DM Sans', sans-serif;
     --dblue: #010015;
+    --bgblue: #03003f;
     --lblue: #4cbe9f;
     --btnhvr: #39a789;
     --btnclck: #1b6954;
     --btnshadow: #155c49;
     --white: #ffffff;
+
+    --bdr: 2px solid var(--lblue);
 }
 
 body {
@@ -36,18 +39,26 @@ body {
     align-items: center;
 
     background: var(--dblue);
-    height: 3rem;
+    border-bottom: var(--bdr);
+    height: 4rem;
 }
 
 .home-ftr {
     position: absolute;
     width: 100vw;
     bottom: 0;
+
+    border-top: var(--bdr);
+    border-bottom: none;
 }
 
 .nav-left, .nav-right {
     margin: 0 1.5rem;
     color: white;
+}
+
+.nav-right > .nav-item {
+    margin-left: 0.5rem;
 }
 
 .login-logout {
@@ -98,4 +109,30 @@ body {
 .signup-form {
     display: flex;
     flex-direction: column;
+}
+
+/* PROFILE PAGE  */
+i {
+    color: var(--white);
+    margin-top: 1rem;
+    width: 2rem;
+}
+
+.profile-page {
+    height: 90%;
+    width: 100vw;
+    background: var(--white);
+}
+
+.profile-nav {
+    height: 100%;
+    width: 5rem;
+    border-right: var(--bdr);
+    background: var(--dblue);
+}
+
+.profile-icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
