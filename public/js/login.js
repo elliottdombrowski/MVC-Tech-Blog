@@ -21,7 +21,6 @@ const loginFormHandler = async (e) => {
 
 const signupFormHandler = async (e) => {
     e.preventDefault();
-    console.log('hitting sign up form handler');
 
     const first_name = document.querySelector('#sign-up-fname').value.trim();
     const last_name = document.querySelector('#sign-up-lname').value.trim();
@@ -29,7 +28,6 @@ const signupFormHandler = async (e) => {
     const password = document.querySelector('#sign-up-password').value.trim();
 
     if(first_name && last_name && email && password) {
-        console.log('hitting sign up IF/ELSE')
         const response = await fetch('/api/users', {
             method: 'POST',
             body: JSON.stringify({ first_name, last_name, email, password }),
@@ -37,7 +35,6 @@ const signupFormHandler = async (e) => {
         }); 
 
         if(response.ok) {
-            console.log('res ok');
             document.location.replace('/');
         } else {
             alert(response.statusText);

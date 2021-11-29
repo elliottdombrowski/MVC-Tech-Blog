@@ -6,7 +6,6 @@ const { sequelize } = require('../../models/Project');
 
 router.get('/', async (req, res) => {
     try {
-        console.log('fuckin please');
         const userData = await User.findAll();
 
         res.status(200).json(userData);
@@ -16,9 +15,7 @@ router.get('/', async (req, res) => {
 });
 
 router.post('/', async (req, res) => {
-    console.log('hitting route');
     try {
-        console.log('hitting try/catch'); 
         const userData = await User.create(req.body);
 
         req.session.save(() => {
