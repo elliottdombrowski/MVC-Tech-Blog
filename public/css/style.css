@@ -1,6 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
 * {
     margin: 0;
     padding: 0;
+}
+
+:root {
+    --dmsans: 'DM Sans', sans-serif;
+    --dblue: #010015;
+    --lblue: #4cbe9f;
+    --btnhvr: #39a789;
+    --btnclck: #1b6954;
+    --btnshadow: #155c49;
+    --white: #ffffff;
 }
 
 body {
@@ -8,10 +20,13 @@ body {
 }
 
 .nav-item {
-    list-style-type: none;
+    font-family: var(--dmsans);
+    font-size: 120%;
+
     display: inline;
+    list-style-type: none;
     text-decoration: none;
-    color: white;
+    color: var(--white);
 }
 
 .main-header {
@@ -20,8 +35,14 @@ body {
     justify-content: space-between;
     align-items: center;
 
-    background-color: #102336;
+    background: var(--dblue);
     height: 3rem;
+}
+
+.home-ftr {
+    position: absolute;
+    width: 100vw;
+    bottom: 0;
 }
 
 .nav-left, .nav-right {
@@ -30,9 +51,22 @@ body {
 }
 
 .login-logout {
-    background: blue;
+    background: var(--lblue);
     padding: 3px 1rem;
     border-radius: 10px;
+    margin-left: 0.5rem;
+    transition: 200ms ease-in-out;
+}
+
+/* ANIMATION  */
+.login-logout:hover,
+.login-logout:focus {
+    background: var(--btnhvr);
+    box-shadow: 1px 1px 1px var(--btnshadow);
+}
+
+.login-logout:active {
+    background: var(--btnclck);
 }
 
 /* LOGIN PAGE  */
