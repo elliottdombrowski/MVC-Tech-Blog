@@ -15,8 +15,9 @@
             <a href="/" class="nav-item">blog</a>
             {{#if logged_in}}
             <a href="/" id="sign-out-button" class="nav-item login-logout">log out</a>
-            {{/if}}
+            {{else}}
             <a href="/login" class="nav-item login-logout">log in</a>
+            {{/if}}
         </nav>
     </header>
 

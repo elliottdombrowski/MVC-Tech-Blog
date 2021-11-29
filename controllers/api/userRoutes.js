@@ -1,10 +1,12 @@
 const router = require('express').Router();
 
+const e = require('express');
 const { User, Project } = require('../../models');
 const { sequelize } = require('../../models/Project');
 
 router.get('/', async (req, res) => {
     try {
+        console.log('fuckin please');
         const userData = await User.findAll();
 
         res.status(200).json(userData);
@@ -29,6 +31,7 @@ router.post('/', async (req, res) => {
     }
 });
 
+// LOG IN ROUTE 
 router.post('/login', async (req, res) => {
     try {
         const userData = await User.findOne({where: {email: req.body.email}});
@@ -53,6 +56,17 @@ router.post('/login', async (req, res) => {
         });
     } catch (err) {
         res.status(400).json(err);
+    }
+});
+
+router.get('/logout', (req, res) => {
+    if (req.session.logged_in) {
+        req.session.destroy(() => {
+            res.status(204).end();
+        });
+    } else if (err) {
+        alert(err);
+        res.status(404).end();
     }
 });
 
