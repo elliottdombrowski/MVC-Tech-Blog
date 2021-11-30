@@ -2,8 +2,6 @@
 const confirmPost = document.getElementById('post-confirm');
 
 const blogPostHandler = async (e) => {
-    console.log('clicked');
-
     const name = document.getElementById('title').value.trim();
     const content = document.getElementById('post-body').value.trim();
 
