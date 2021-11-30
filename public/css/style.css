@@ -119,6 +119,8 @@ i {
 }
 
 .profile-page {
+    display: flex;
+
     height: 90%;
     width: 100vw;
     background: var(--white);
@@ -135,4 +137,20 @@ i {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.profile-user-info {
+    display: grid;
+    margin: auto;
+
+    background: var(--dblue);
+    padding: 2rem 5rem;
+    border: 5px solid var(--lblue);
+    border-radius: 10px;
+}
+
+.profile-user-name,
+.profile-email {
+    font-family: var(--dmsans);
+    color: var(--white);
 }
