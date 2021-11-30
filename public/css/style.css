@@ -177,10 +177,6 @@ i {
 }
 
 /* BLOG POST FORM  */
-.blog-form-parent {
-    margin-top: 2rem;
-}
-
 .blog-label {
     font-family: var(--dmsans);
     color: var(--white);

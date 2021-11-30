@@ -7,15 +7,17 @@ const blogPostHandler = async (e) => {
 
     if (title && body) {
         //FINISH THIS LATER
-        const response = await fetch('/api/???', {
+        const response = await fetch('/api/projects/post', {
             method: 'POST',
             body: JSON.stringify({ title, body }),
             headers: { 'Content-Type': 'application/json' },
         });
-
+        console.log('response: ' + JSON.stringify(response));
         if (response.ok) {
+            console.log('hitting blog post handler');
             //DO WHAT? DOCUMENT LOCATION REPLACE?
         } else {
+            console.log('fuckin up');
             alert(response.statusText);
         }
     }
@@ -23,5 +25,5 @@ const blogPostHandler = async (e) => {
 
 
 document
-    .querySelector('#blog-submit')
+    .querySelector('#blog-form')
     .addEventListener('submit', blogPostHandler);
