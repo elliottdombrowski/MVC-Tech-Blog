@@ -1,25 +1,29 @@
 // HANDLER FOR POST SUBMIT FORM
+const confirmPost = document.getElementById('post-confirm');
+
 const blogPostHandler = async (e) => {
-    e.preventDefault();
+    console.log('clicked');
 
-    const title = document.getElementById('title').value.trim();
-    const body = document.getElementById('post-body').value.trim();
+    const name = document.getElementById('title').value.trim();
+    const content = document.getElementById('post-body').value.trim();
 
-    if (title && body) {
+    
+    if (name && content) {
         //FINISH THIS LATER
-        const response = await fetch('/api/projects/post', {
+        const response = await fetch('/api/projects/', {
             method: 'POST',
-            body: JSON.stringify({ title, body }),
+            body: JSON.stringify({ name, content }),
             headers: { 'Content-Type': 'application/json' },
         });
-        console.log('response: ' + JSON.stringify(response));
         if (response.ok) {
-            console.log('hitting blog post handler');
-            //DO WHAT? DOCUMENT LOCATION REPLACE?
+            // alert('Post created!');
+            // confirmPost.innerHTML = 'post created!'
         } else {
-            console.log('fuckin up');
             alert(response.statusText);
         }
+    } else {
+        e.preventDefault();
+        alert('Please enter all forms!');
     }
 };
 

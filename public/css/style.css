@@ -208,11 +208,16 @@ i {
     resize: vertical;
 }
 
+.post-btn-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .blog-post-btn {
     font-family: var(--dmsans);
     color: var(--white);    
     border: none;
     border-radius: 5px;
     margin-top: 0.3rem;
-    float: right;    
 }
