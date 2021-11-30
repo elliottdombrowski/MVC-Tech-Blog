@@ -41,4 +41,12 @@ router.get('/user', withAuth, async (req, res) => {
     }
 });
 
+router.get('/blog', withAuth, async (req, res) => {
+    try {
+        res.render('project', {logged_in: req.session.logged_in});
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
 module.exports = router;
