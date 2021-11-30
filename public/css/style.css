@@ -14,6 +14,7 @@
     --btnclck: #1b6954;
     --btnshadow: #155c49;
     --white: #ffffff;
+    --disabled: #838383;
 
     --bdr: 2px solid var(--lblue);
 }
@@ -147,6 +148,26 @@ i {
     padding: 2rem 5rem;
     border: 5px solid var(--lblue);
     border-radius: 10px;
+}
+
+.profile-user-info-wrapper-outer {
+    display: flex;
+    flex-direction: row;
+}
+
+.profile-user-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 0 1.5rem;
+}
+
+.change-creds {
+    font-family: var(--dmsans);
+    font-size: 80%;
+    color: var(--disabled);
+    margin-bottom: 2px;
+    cursor: pointer;
 }
 
 .profile-user-name,
