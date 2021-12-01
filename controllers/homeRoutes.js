@@ -9,7 +9,7 @@ router.get('/', async (req, res) => {
         });
 
         const posts = postData.map((post) => post.get({ plain: true }));
-        
+
         res.render('homepage', {
             posts,
             logged_in: req.session.logged_in
@@ -37,6 +37,7 @@ router.get('/profile', withAuth, async (req, res) => {
 
 router.get('/user', withAuth, async (req, res) => {
     try {
+        console.log('hello 2');
         const userData = await User.findByPk(req.session.user_id);
         
         const user = userData.get({ plain: true });

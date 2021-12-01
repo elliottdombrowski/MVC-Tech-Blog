@@ -20,20 +20,12 @@ Comment.init(
             allowNull: false,
             defaultValue: DataTypes.NOW,
         },  
-        user_fname: {
-            type: DataTypes.STRING,
+        user_id: {
+            type: DataTypes.INTEGER,
             allowNull: false,
             references: {
                 model: 'user',
-                key: 'first_name',
-            },
-        },
-        user_lname: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            references: {
-                model: 'user',
-                key: 'last_name',
+                key: 'id',
             },
         },
         proj_id: {

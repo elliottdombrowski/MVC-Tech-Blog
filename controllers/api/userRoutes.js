@@ -1,11 +1,10 @@
 const router = require('express').Router();
 
-const e = require('express');
 const { User, Project } = require('../../models');
-const { sequelize } = require('../../models/Project');
 
 router.get('/', async (req, res) => {
     try {
+        console.log('hello');
         const userData = await User.findAll();
 
         res.status(200).json(userData);
@@ -21,7 +20,9 @@ router.post('/', async (req, res) => {
         req.session.save(() => {
             req.session.id = userData.id;
             req.session.logged_in = true;
-            res.status(200).json(userData);
+            req.session.user_id = userData.id;
+            req.session.user_data = JSON.stringify(userData);
+            res.json({user: userData, logged_in: true, message: 'logged in'});
         });
     } catch (err) {
         res.status(400).json(err);

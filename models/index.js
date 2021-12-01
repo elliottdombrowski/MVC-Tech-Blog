@@ -12,7 +12,11 @@ Project.belongsTo(User, {
 });
 
 Comment.belongsTo(Project, {
-    foreignKey: 'proj_id',
+    foreignKey: 'proj_id'
+});
+
+Comment.belongsTo(User, {
+    foreignKey: 'user_id'
 });
 
 module.exports = {User, Project, Comment};
