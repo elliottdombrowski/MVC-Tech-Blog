@@ -23,6 +23,12 @@ body {
     height: 100vh;
 }
 
+i {
+    color: var(--white);
+    margin-top: 1rem;
+    width: 2rem;
+}
+
 .nav-item {
     font-family: var(--dmsans);
     font-size: 120%;
@@ -41,7 +47,7 @@ body {
 
     background: var(--dblue);
     border-bottom: var(--bdr);
-    height: 4rem;
+    height: 7vh;
 }
 
 .home-ftr {
@@ -81,6 +87,43 @@ body {
     background: var(--btnclck);
 }
 
+/* HOME PAGE */
+.home-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 86vh;
+}
+
+.blog-post-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    background: var(--dblue);
+    color: white;
+    width: 40vw;
+}
+
+.comment-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.post-body {
+    font-family: var(--dmsans);
+}
+
+.post-date {
+    font-size: 120%;
+}
+
+.fa-comment {
+    margin: 0;
+}
+
 /* LOGIN PAGE  */
 
 .login-page {
@@ -113,12 +156,6 @@ body {
 }
 
 /* PROFILE PAGE  */
-i {
-    color: var(--white);
-    margin-top: 1rem;
-    width: 2rem;
-}
-
 .profile-page {
     display: flex;
 
@@ -220,8 +257,4 @@ i {
     border: none;
     border-radius: 5px;
     margin-top: 0.3rem;
-}
-
-p {
-    color: white;
 }

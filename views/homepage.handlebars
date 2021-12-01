@@ -1,7 +1,13 @@
 <section class="home-page" id="home">
-    {{#each posts as |post| }}
-    <h2>{{name}}</h2>
-    <p>{{content}}</p>
-    <p>{{date_created}}</p>
-    {{/each}}
+        {{#each posts as |post| }}
+        <div class="blog-post-wrapper">
+            <h2 class="post-body">{{name}}</h2>
+            <p class="post-body">{{content}}</p>
+
+            <div class="comment-wrapper">
+                <p class="post-body post-date">{{format_date date_created}}</p>
+                <i class="far fa-comment fa-lg"></i>
+            </div>
+        </div>
+        {{/each}}
 </section>
