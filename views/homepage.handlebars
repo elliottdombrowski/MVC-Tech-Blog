@@ -1,6 +1,7 @@
 <section class="home-page" id="home">
-    <h2 class="blog-header">
-        new posts for you
-    </h2>
-
+    {{#each posts as |post| }}
+    <h2>{{name}}</h2>
+    <p>{{content}}</p>
+    <p>{{date_created}}</p>
+    {{/each}}
 </section>
