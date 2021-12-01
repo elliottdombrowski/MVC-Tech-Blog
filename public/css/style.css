@@ -101,6 +101,9 @@ i {
     flex-direction: column;
     justify-content: flex-start;
 
+    padding: 1rem 3rem;
+    border: 5px solid var(--lblue);
+    border-radius: 10px;
     background: var(--dblue);
     color: white;
     width: 40vw;
@@ -121,6 +124,9 @@ i {
 }
 
 .fa-comment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0;
 }
 
