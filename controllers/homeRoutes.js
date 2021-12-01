@@ -5,7 +5,9 @@ const withAuth = require('../utils/auth');
 router.get('/', async (req, res) => {
     try {
         console.log('check 1');
-        const postData = await Project.findAll({ include: [{ all: true, nested: true }]});
+        const postData = await Project.findAll({ 
+            include: [{ all: true, nested: true }]
+        });
 
         const posts = postData.map((post) => post.get({ plain: true }));
         console.log('check 3');
