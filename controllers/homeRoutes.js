@@ -60,7 +60,10 @@ router.get('/blog', withAuth, async (req, res) => {
 
 router.get('/posts', withAuth, async (req, res) => {
     try {
-        const myPosts = await Project.findAll({ where: {user_id: req.session.user_id}});
+        const myPosts = await Project.findAll({
+            where: {user_id: req.session.user_id},
+            include: [{ all: true, nested: true }]
+        });
 
         const posts = myPosts.map((post) => post.get({ plain: true }));
         console.log('users posts ' + JSON.stringify(posts));

@@ -205,6 +205,9 @@ i {
     padding: 2rem 5rem;
     border: 5px solid var(--lblue);
     border-radius: 10px;
+    
+    font-family: var(--dmsans);
+    color: var(--white);
 }
 
 .profile-user-info-wrapper-outer {
