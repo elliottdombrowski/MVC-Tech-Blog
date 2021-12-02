@@ -1,17 +1,17 @@
 <section class="home-page">
-    {{#each }}
+    {{#each findposts as |findpost|}}
     <div class="blog-post-wrapper">
         <div class="title-wrapper">
-            <p>{{hello}}</p>
             <h2 class="post-body">{{name}}</h2>
-            {{!-- <p class="post-body poster-name">{{user.first_name}} {{user.last_name}}</p> --}}
+            <p class="post-body poster-name">{{user.first_name}} {{user.last_name}}</p>
         </div>
         <p class="post-body">{{content}}</p>
 
         <div class="comment-wrapper">
-            <p class="post-body post-date">{{date_created}}</p>
+            <p class="post-body post-date">{{format_date date_created}}</p>
         </div>
     </div>
+    {{/each}}
     {{#each comments as |comment|}}
     <div class="blog-post-wrapper">
         <p>test</p>
