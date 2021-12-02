@@ -12,9 +12,20 @@
         </div>
     </div>
     {{/each}}
+    <div class="comment-create">
+        <form class="create-comment" id="comment-submit">
+            <label for="comment-input">leave a comment</label>
+            <input type="text" name="comment-input" id="comment-input" class="comment">
+            
+            <div class="comment-btn-wrapper button-pos">
+                <button class="comment-btn login-logout">post</button>
+            </div>
+        </form>
+    </div>
     {{#each comments as |comment|}}
     <div class="blog-post-wrapper">
         <p>test</p>
     </div>
     {{/each}}
 </section>
+<script src="/js/homepage.js"></script>
