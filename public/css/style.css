@@ -101,12 +101,26 @@ i {
     flex-direction: column;
     justify-content: flex-start;
 
+    margin: 2rem 0;
     padding: 1rem 3rem;
     border: 5px solid var(--lblue);
     border-radius: 10px;
     background: var(--dblue);
     color: white;
     width: 40vw;
+}
+
+.title-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    font-family: var(--dmsans);
+}
+
+.poster-name {
+    font-size: 100%;
 }
 
 .comment-wrapper {

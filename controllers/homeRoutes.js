@@ -37,7 +37,6 @@ router.get('/profile', withAuth, async (req, res) => {
 
 router.get('/user', withAuth, async (req, res) => {
     try {
-        console.log('hello 2');
         const userData = await User.findByPk(req.session.user_id);
         
         const user = userData.get({ plain: true });
@@ -64,7 +63,7 @@ router.get('/posts', withAuth, async (req, res) => {
         const myPosts = await Project.findAll({ where: {user_id: req.session.user_id}});
 
         const posts = myPosts.map((post) => post.get({ plain: true }));
-        console.log('posts... ' + JSON.stringify(posts));
+        console.log('users posts ' + JSON.stringify(posts));
         res.render('myposts', {
             posts,
             logged_in: req.session.logged_in
@@ -73,5 +72,23 @@ router.get('/posts', withAuth, async (req, res) => {
         res.status(500).json(err);
     }
 });
+
+router.get('/comments', async  (req, res) => {
+    try {
+        console.log('trying find');
+        const findPost = await Project.findAll({ where: {id: 1}});
+        // const findposts = findPost.map((findpost) => findpost.get({ plain: true }));
+
+        console.log('finding post ' + JSON.stringify(post));
+        // const findComments = await Comment.findAll({ where: {proj_id: }})
+        res.render('comments', {
+            findPost,
+            hello: 'world',
+            logged_in: req.session.logged_in
+        });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+})
 
 module.exports = router;
