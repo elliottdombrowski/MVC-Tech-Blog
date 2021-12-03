@@ -28,7 +28,6 @@ router.post('/:id', withAuth, async (req, res) => {
             comment_date_created: req.body.comment_date_created,
             proj_id: req.params.id,
         });
-        console.log('finding comment ' + JSON.stringify(createComment));
 
         res.status(200).json({ok: true});
 

@@ -66,7 +66,6 @@ router.get('/posts', withAuth, async (req, res) => {
         });
 
         const posts = myPosts.map((post) => post.get({ plain: true }));
-        console.log('users posts ' + JSON.stringify(posts));
         res.render('myposts', {
             posts,
             logged_in: req.session.logged_in
@@ -86,13 +85,10 @@ router.get('/comments/:id', async  (req, res) => {
         const findposts = findPost.map((findpost) => findpost.get({ plain: true }));
 
         const findComment = await Comment.findAll({
-            where: {id: req.params.id},
+            where: {proj_id: req.params.id},
             include: [{ all: true, nested: true }]
         });
         const comments = findComment.map((comment) => comment.get({ plain: true }));
-
-        console.log('finding comment ' + comments);
-        const findcomments = findComment.map((findcomment) => findcomment.get({ plain: true }));
 
         res.render('comments', {
             findposts,
