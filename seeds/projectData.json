@@ -1,4 +1,20 @@
-[{
-    "name": "A Test Blog Post",
-    "content": "just some test text test pls"
-}]
+[
+    {
+        "id": 1,
+        "name": "A Test Blog Post",
+        "content": "just some test text test pls",
+        "user_id": 1
+    },
+    {   
+        "id": 2,
+        "name": "Test Post 2",
+        "content": "more test text fuckin hooray",
+        "user_id": 2
+    },
+    {
+        "id": 3,
+        "name": "Test Post 3",
+        "content": "one more... for fun.",
+        "user_id": 1
+    }
+]

@@ -1,6 +1,16 @@
-[{
-    "first_name": "Elliott",
-    "last_name": "Dombrowski",
-    "email": "elliottdombrowski@gmail.com",
-    "password": "hi123"
-}]
+[
+    {
+        "id": 1,
+        "first_name": "Elliott",
+        "last_name": "Dombrowski",
+        "email": "elliottdombrowski@gmail.com",
+        "password": "hi123"
+    },
+    {
+        "id": 2,
+        "first_name": "John",
+        "last_name": "Doe",
+        "email": "johndoe@test.com",
+        "password": "123hi"
+    }
+]

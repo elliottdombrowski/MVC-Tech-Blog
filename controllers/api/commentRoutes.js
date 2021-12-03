@@ -22,13 +22,14 @@ router.put('/:id', withAuth, async (req, res) => {
 
 router.post('/:id', withAuth, async (req, res) => {
     try {
-        console.log('req body' + JSON.stringify(req.body));
         const createComment = await Comment.create({
             body: req.body.comment,
             user_id: req.session.user_id,
             comment_date_created: req.body.comment_date_created,
             proj_id: req.params.id,
         });
+
+        router.get('/comments/:id')
 
         res.status(200).json({ok: true});
 

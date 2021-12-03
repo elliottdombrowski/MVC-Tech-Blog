@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "body": "wow this post is so cool",
+        "user_id": 2,
+        "proj_id": 1
+    },
+    {
+        "id": 2,
+        "body": "god this post is some hot shit",
+        "user_id": 1,
+        "proj_id": 2
+    },
+    {
+        "id": 3,
+        "body": "bad take.",
+        "user_id": 1,
+        "proj_id": 1
+    }
+]
