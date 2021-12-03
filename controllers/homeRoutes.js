@@ -76,17 +76,18 @@ router.get('/posts', withAuth, async (req, res) => {
     }
 });
 
-router.get('/comments', async  (req, res) => {
+router.get('/comments/:id', async  (req, res) => {
     try {
         console.log('trying find');
         const findPost = await Project.findAll({ 
-            where: {id: 2},
+            where: {id: req.params.id},
             include: [{ all: true, nested: true }]
         });
         const findposts = findPost.map((findpost) => findpost.get({ plain: true }));
 
         res.render('comments', {
             findposts,
+            proj_id: req.params.id,
             logged_in: req.session.logged_in
         });
     } catch (err) {

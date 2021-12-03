@@ -22,14 +22,18 @@ router.put('/:id', withAuth, async (req, res) => {
 
 router.post('/:id', withAuth, async (req, res) => {
     try {
+        console.log('req body' + JSON.stringify(req.body));
         const createComment = await Comment.create({
-            ...req.body,
+            body: req.body.comment,
+            user_id: req.session.user_id,
+            comment_date_created: req.body.comment_date_created,
             proj_id: req.params.id,
         });
 
         res.status(200).json({ok: true});
 
     } catch (err) {
+        console.log('error ' + err);
         res.status(500).json(err);
     }
 });
