@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Project } = require('../models');
+const { User, Project, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -85,15 +85,18 @@ router.get('/comments/:id', async  (req, res) => {
         });
         const findposts = findPost.map((findpost) => findpost.get({ plain: true }));
 
-        // const findComment = await Comment.findAll({
-        //     where: {proj_id: req.params.id},
-        //     include: [{ all: true, nested: true }]
-        // });
-        // const comments = findComment.map((comment) => comment.get({ plain: true }));
+        const findComment = await Comment.findAll({
+            where: {id: req.params.id},
+            include: [{ all: true, nested: true }]
+        });
+        const comments = findComment.map((comment) => comment.get({ plain: true }));
+
+        console.log('finding comment ' + comments);
+        const findcomments = findComment.map((findcomment) => findcomment.get({ plain: true }));
 
         res.render('comments', {
             findposts,
-            // comments,
+            comments,
             proj_id: req.params.id,
             logged_in: req.session.logged_in
         });
