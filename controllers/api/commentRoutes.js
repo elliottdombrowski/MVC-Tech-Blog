@@ -29,8 +29,6 @@ router.post('/:id', withAuth, async (req, res) => {
             proj_id: req.params.id,
         });
 
-        router.get('/comments/:id')
-
         res.status(200).json({ok: true});
 
     } catch (err) {
