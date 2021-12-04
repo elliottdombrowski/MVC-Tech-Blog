@@ -22,22 +22,24 @@
             </div>
         </form>
     </div>
-    {{#each comments as |comment|}}
-    <div class="blog-post-wrapper comment-wrapper">
-        <div class="comment-content-wrapper">
-            <p style="color: white">{{body}}</p>
-            <div class="comment-icon-wrapper">
-                <i class="far fa-trash-alt"></i>
-                <i class="fas fa-edit"></i>
+
+    <div class="comment-container">    
+        {{#each comments as |comment|}}
+        <div class="blog-post-wrapper comment-wrapper">
+            <div class="comment-content-wrapper">
+                <p style="color: white">{{body}}</p>
+                <div class="comment-icon-wrapper">
+                    <i class="far fa-trash-alt"></i>
+                    <i class="fas fa-edit"></i>
+                </div>
+            </div>
+
+            <div class="comment-content-wrapper">
+                <p>{{user.first_name}} {{user.last_name}}</p>
+                <p class="comment-date">{{format_date comment_date_created}}</p>
             </div>
         </div>
-
-        <div class="comment-content-wrapper">
-            <p>{{user.first_name}}</p>
-            <p>{{user.last_name}}</p>
-            <p>{{format_date comment_date_created}}</p>
-        </div>
+        {{/each}}
     </div>
-    {{/each}}
 </section>
 <script src="/js/homepage.js"></script>
