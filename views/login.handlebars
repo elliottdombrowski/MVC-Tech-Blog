@@ -1,36 +1,36 @@
 {{!-- LOGIN PAGE  --}}
 
 <section class="login-page" id="login">
-    <section class="sign-up-hero">
-        <h2 class="login-header">sign up</h2>
-        <form id="signup-form" class="signup-form">
-            <input type="text" class="sign-up__fname sign-up-input" id="sign-up-fname" placeholder="first name">
-            <input type="text" class="sign-up__lname sign-up-input" id="sign-up-lname" placeholder="last name">
-            
-            <div class="sign-up__auth">
+    <section class="login-signup-wrapper">
+        <section class="sign-up-hero">
+            <h2 class="login-header">sign up</h2>
+            <form id="signup-form" class="signup-form">
+                <input type="text" class="sign-up__fname sign-up-input" id="sign-up-fname" placeholder="first name">
+                <input type="text" class="sign-up__lname sign-up-input" id="sign-up-lname" placeholder="last name">
+                
                 <input type="text" class="sign-up__email sign-up-input sign-up-creds" id="sign-up-email" placeholder="email">
                 <input type="text" class="sign-up__password sign-up-input sign-up-creds" id="sign-up-password" placeholder="password">
-            </div>
 
-            <div class="button-pos">
-                <button class="sign-up__submit sign-up-input form-btn" id="sign-up-submit">sign up</button>
-            </div>
-        </form>
-    </section>
+                <div class="button-pos">
+                    <button class="sign-up__submit sign-up-input form-btn login-logout" id="sign-up-submit">sign up</button>
+                </div>
+            </form>
+        </section>
 
-    {{!-- LOG IN  --}}
-    <section class="log-in-hero">
-        <h2 class="login-header">log in</h2>
-        <form action="/" method="post" id="login-form" class="signup-form">
-            <div class="sign-up__auth log-in__auth">
-                <input type="text" class="log-in__email sign-up-input sign-up-creds" id="log-in-email" placeholder="email">
-                <input type="password" class="log-in__password sign-up-input sign-up-creds" id="log-in-password" placeholder="password">
-            </div>
+        {{!-- LOG IN  --}}
+        <section class="log-in-hero">
+            <h2 class="login-header">log in</h2>
+            <form action="/" method="post" id="login-form" class="signup-form">
+                <div class="sign-up__auth log-in__auth">
+                    <input type="text" class="log-in__email sign-up-input sign-up-creds" id="log-in-email" placeholder="email">
+                    <input type="password" class="log-in__password sign-up-input sign-up-creds" id="log-in-password" placeholder="password">
+                </div>
 
-            <div class="button-pos">
-                <button class="log-in__submit sign-up-input form-btn" id="log-in-submit">log in</button>
-            </div>
-        </form>
-    </section>
+                <div class="button-pos">
+                    <button class="log-in__submit sign-up-input form-btn login-logout" id="log-in-submit">log in</button>
+                </div>
+            </form>
+        </section>
+    </section
 </section>
 <script src="/js/login.js"></script>

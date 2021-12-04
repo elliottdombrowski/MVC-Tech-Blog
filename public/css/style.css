@@ -76,17 +76,6 @@ i {
     transition: 200ms ease-in-out;
 }
 
-/* ANIMATION  */
-.login-logout:hover,
-.login-logout:focus {
-    background: var(--btnhvr);
-    box-shadow: 1px 1px 1px var(--btnshadow);
-}
-
-.login-logout:active {
-    background: var(--btnclck);
-}
-
 /* HOME PAGE */
 .home-page {
     display: flex;
@@ -100,7 +89,7 @@ i {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-
+    
     margin: 2rem 0;
     padding: 1rem 3rem;
     border: 5px solid var(--lblue);
@@ -115,7 +104,7 @@ i {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
+    
     font-family: var(--dmsans);
 }
 
@@ -145,16 +134,27 @@ i {
 }
 
 /* LOGIN PAGE  */
-
 .login-page {
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-around;
-
+    
     height: 90%;
-    margin: 0 15%;
-    background: orchid;
+    margin: 0 10%;
+}
+
+.login-header {
+    margin-bottom: 0.1rem;
+}
+
+.login-signup-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1.5rem 3rem;
+    background: var(--dblue);
+    font-family: var(--dmsans);
+    color: white;
 }
 
 .sign-up-hero,
@@ -162,7 +162,6 @@ i {
     display: flex;
     flex-direction: column;
     width: 35%;
-    height: 15rem;
 }
 
 .log-in__auth {
@@ -175,10 +174,21 @@ i {
     flex-direction: column;
 }
 
+.sign-up-input {
+    margin: 0.2rem 0;
+    border: none;
+    width: 100%;
+}
+
+.sign-up__submit,
+.log-in__submit {
+    border-radius: 5px;
+}
+
 /* PROFILE PAGE  */
 .profile-page {
     display: flex;
-
+    
     height: 90%;
     width: 100vw;
     background: var(--white);
@@ -200,7 +210,7 @@ i {
 .profile-user-info {
     display: grid;
     margin: auto;
-
+    
     background: var(--dblue);
     padding: 2rem 5rem;
     border: 5px solid var(--lblue);
@@ -264,7 +274,7 @@ i {
 .form-input__body {
     height: 15rem;
     padding: 5px;
-
+    
     resize: vertical;
 }
 
@@ -316,4 +326,15 @@ i {
 
 .post-date-wrapper {
     padding: 0.5rem 0;
+}
+
+/* ANIMATION  */
+.login-logout:hover,
+.login-logout:focus {
+    background: var(--btnhvr);
+    box-shadow: 1px 1px 1px var(--btnshadow);
+}
+
+.login-logout:active {
+    background: var(--btnclck);
 }
