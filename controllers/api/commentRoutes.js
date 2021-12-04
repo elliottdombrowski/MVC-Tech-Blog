@@ -2,14 +2,7 @@ const router = require('express').Router();
 const { Comment, Project, User } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-router.get('/display', async (req, res) => {
-    try {
-
-    } catch (err) {
-        res.status(500).json(err);
-    }
-});
-
+//FUTURE DEVELOPMENT
 router.put('/:id', withAuth, async (req, res) => {
     try {
         const updateComment = await Comment.update(req.body, {where: {id: req.params.id}});
@@ -20,6 +13,7 @@ router.put('/:id', withAuth, async (req, res) => {
     }
 }); 
 
+//COMMENT POSTING ROUTE
 router.post('/:id', withAuth, async (req, res) => {
     try {
         const createComment = await Comment.create({

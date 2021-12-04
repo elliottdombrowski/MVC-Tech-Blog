@@ -18,10 +18,10 @@ const PORT = process.env.PORT || 3001;
 const hbs = exphbs.create({ helpers });
 
 // COOKIES STUFF
-//adding a comment here so heroku will let me deploy
 const oneHr = 1000 * 60 * 60 * 1;
 const sess = {
     secret: 'SUPER secret secret secret',
+    //SET COOKIES TO EXPIRE AFTER 1 HOUR
     cookie: { maxAge: oneHr },
     resave: false,
     saveUninitialized: true,
