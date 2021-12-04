@@ -281,3 +281,20 @@ i {
     border-radius: 5px;
     margin-top: 0.3rem;
 }
+
+/* COMMENTS PAGE  */
+.comment-wrapper {
+    padding: 0.5rem 1.5rem;
+    font-family: var(--dmsans);
+    color: var(--white);
+}
+
+.comment-content-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-icon-wrapper {
+    display: flex;
+    flex-direction: row;
+}
