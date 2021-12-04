@@ -7,7 +7,7 @@
         </div>
         <p class="post-body">{{content}}</p>
 
-        <div class="comment-wrapper">
+        <div class="comment-wrapper post-date-wrapper">
             <p class="post-body post-date">{{format_date date_created}}</p>
         </div>
     </div>
@@ -29,7 +29,7 @@
             <div class="comment-content-wrapper">
                 <p style="color: white">{{body}}</p>
                 <div class="comment-icon-wrapper">
-                    <i class="far fa-trash-alt"></i>
+                    <i class="far fa-trash-alt" onclick="deleteComment({{id}})"></i>
                     <i class="fas fa-edit"></i>
                 </div>
             </div>

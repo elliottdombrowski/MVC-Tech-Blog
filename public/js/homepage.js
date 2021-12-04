@@ -20,21 +20,33 @@ const postComment = async (id) => {
         } else {
             alert(res.statusText);
         }
-
     } else {
         alert('Please enter a comment.');
     }
 };
 
-//WRAP QUERY SELECTORS IN TRY/ CATCH TO PREVENT ERRORS IF NOT FOUND
-// try {
-//     document
-//     .querySelectorAll('.comment-btn')
-//     .addEventListener('click', showComments);
-// } catch {}
+const deleteComment = async (id) => {
+    console.log('clicked delete');
+    const res = await fetch('/api/comment/' + id, {
+        method: 'DELETE'
+    }); 
 
-// try {
-//     document
-//         .querySelector('#comment-submit')
-//         .addEventListener('submit', postComment);
-// } catch {}
+    //THIS IS TOTALLY A COUNTERINTUITIVE WAY TO DO THIS. I'LL FIX IT LATER THOUGH.
+    if (res.ok) {
+        return location.reload();
+    }
+    alert(res.statusText);
+};
+
+//FUTURE DEVELOPMENTS! DON'T JUDGE ME TOO HARD!
+const updateComment = async (id) => {
+    // const res = await fetch ('/api/comment/' + id, {
+    //     method: 'PUT',
+    // });
+
+    // if (res.ok) {
+
+    // } else {
+    //     alert(res.statusText);
+    // }
+};

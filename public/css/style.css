@@ -313,3 +313,7 @@ i {
 .comment-date {
     text-align: right;
 }
+
+.post-date-wrapper {
+    padding: 0.5rem 0;
+}
