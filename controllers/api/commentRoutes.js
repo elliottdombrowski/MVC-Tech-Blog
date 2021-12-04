@@ -26,11 +26,11 @@ router.post('/:id', withAuth, async (req, res) => {
         res.status(200).json({ok: true});
 
     } catch (err) {
-        console.log('error ' + err);
         res.status(500).json(err);
     }
 });
 
+//COMMENT DELETE ROUTE
 router.delete('/:id', withAuth, async (req, res) => {
     try {
         const deleteComment = await Comment.destroy({

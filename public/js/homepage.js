@@ -4,11 +4,9 @@ const showComments = (id) => {
 };
 
 const postComment = async (id) => {
-    // event.preventDefault();
     const comment = document.querySelector('#comment-input').value.trim();
 
     if (comment) {
-        //FINISH THIS ROUTE
         const res = await fetch('/api/comment/' + id, {
             method: 'POST',
             body: JSON.stringify({ comment }),
@@ -16,7 +14,6 @@ const postComment = async (id) => {
         });
 
         if (res.ok) {
-            console.log("worked");
         } else {
             alert(res.statusText);
         }
@@ -26,13 +23,13 @@ const postComment = async (id) => {
 };
 
 const deleteComment = async (id) => {
-    console.log('clicked delete');
     const res = await fetch('/api/comment/' + id, {
         method: 'DELETE'
     }); 
 
     //THIS IS TOTALLY A COUNTERINTUITIVE WAY TO DO THIS. I'LL FIX IT LATER THOUGH.
     if (res.ok) {
+        //RELOAD PAGE SO UPDATED COMMENTS RENDER PROPERLY AFTER DELETE
         return location.reload();
     }
     alert(res.statusText);
@@ -40,13 +37,4 @@ const deleteComment = async (id) => {
 
 //FUTURE DEVELOPMENTS! DON'T JUDGE ME TOO HARD!
 const updateComment = async (id) => {
-    // const res = await fetch ('/api/comment/' + id, {
-    //     method: 'PUT',
-    // });
-
-    // if (res.ok) {
-
-    // } else {
-    //     alert(res.statusText);
-    // }
 };

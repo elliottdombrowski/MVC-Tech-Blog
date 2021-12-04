@@ -14,8 +14,6 @@ const blogPostHandler = async (e) => {
             headers: { 'Content-Type': 'application/json' },
         });
         if (response.ok) {
-            // alert('Post created!');
-            // confirmPost.innerHTML = 'post created!'
         } else {
             alert(response.statusText);
         }
