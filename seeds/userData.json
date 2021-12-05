@@ -1,41 +1,48 @@
 [
     {
+        "id": 1,
         "first_name": "Elliott",
         "last_name": "Dombrowski",
         "email": "elliottdombrowski@gmail.com",
         "password": "hi123"
     },
     {
+        "id": 2,
         "first_name": "John",
         "last_name": "Doe",
         "email": "johndoe@test.com",
         "password": "123hi"
     },
     {
+        "id": 3,
         "first_name": "Hugo",
         "last_name": "Reyes",
         "email": "hurleybird@dharma.com",
         "password": "4815"
     },
     {
+        "id": 4,
         "first_name": "Hank",
         "last_name": "Schrader",
         "email": "minerals@rocks.com",
         "password": "minerals"
     },
     {
+        "id": 5,
         "first_name": "Ian",
         "last_name": "Mackaye",
         "email": "dischord@dc.com",
         "password": "redmedicine"
     },
     {
+        "id": 6,
         "first_name": "Blake",
         "last_name": "Schwarzenbach",
         "email": "jawbreaker@gmail.com",
         "password": "seaanemone"
     },
     {
+        "id": 7,
         "first_name": "Steve",
         "last_name": "Jobs",
         "email": "absoluteasshole@icloud.com",

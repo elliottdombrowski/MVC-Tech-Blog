@@ -13,12 +13,16 @@ const seedDatabase = async () => {
         returning: true,
     });
     
-    for (const project of projectData) {
-        await Project.create({
-            ...project,
-        });
-    }
-    
+    // for (const project of projectData) {
+    //     await Project.create({
+    //         ...project,
+    //     });
+    // }
+    const project = await Project.bulkCreate(projectData, {
+        individualHooks: true,
+        returning: true,
+    })
+
     const comment = await Comment.bulkCreate(commentData, {
         individualHooks: true,
         returning: true,
