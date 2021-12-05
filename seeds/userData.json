@@ -14,31 +14,38 @@
         "password": "123hi"
     },
     {
-        "id": 2,
+        "id": 3,
         "first_name": "Hugo",
         "last_name": "Reyes",
         "email": "hurleybird@dharma.com",
         "password": "4815"
     },
     {
-        "id": 3,
+        "id": 4,
         "first_name": "Hank",
         "last_name": "Schrader",
         "email": "minerals@rocks.com",
         "password": "minerals"
     },
     {
-        "id": 4,
+        "id": 5,
         "first_name": "Ian",
         "last_name": "Mackaye",
         "email": "dischord@dc.com",
         "password": "redmedicine"
     },
     {
-        "id": 5,
+        "id": 6,
         "first_name": "Blake",
         "last_name": "Schwarzenbach",
         "email": "jawbreaker@gmail.com",
         "password": "seaanemone"
+    },
+    {
+        "id": 7,
+        "first_name": "Steve",
+        "last_name": "Jobs",
+        "email": "absoluteasshole@icloud.com",
+        "password": "techjesus"
     }
 ]
