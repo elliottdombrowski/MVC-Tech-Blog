@@ -1,42 +1,35 @@
 [
     {
-        "id": 1,
         "name": "Why Mac OS is inferior to Windows",
         "content": "Look, hear me out. I know this is generally an unpopular opinion, and by most technical definitions, I'm just... wrong, but I dunno. Mac OS looks like it never grew out of trying to look sleek and trendy, like, 10 years ago. Plus, fuck Apple's ultra-capitalist minimalist design. I watched some Apple tech plug 4 adapters into the side of a Macbook just to charge an iPad. Also, fuck Steve Jobs.",
         "user_id": 1
     },
     {
-        "id": 2,
         "name": "Ed Snowden Did Nothing Wrong",
         "content": "That's all there is to it. If you think he's a traitor, you should probably stop eating US propaganda.",
         "user_id": 4
     },
     {
-        "id": 3,
         "name": "Why RegEx is dope",
         "content": "Writing Regular Expressions is real neato, dude. It's like putting together puzzle pieces. And then having your puzzle pieces read for you. It's cool. That's all I have to say on the matter.",
         "user_id": 6
     },
     {
-        "id": 4,
         "name": "First Post!",
         "content": "I just found this new tech blog app. Pretty alright, I guess. Anyway, that's all.",
         "user_id": 3
     },
     {
-        "id": 5,
         "name": "Rocks",
         "content": "I don't know much about tech, but I sure do like rocks. The pretty colorful ones.",
         "user_id": 3
     },
     {
-        "id": 6,
         "name": "stop charging so much.",
         "content": "Imagine if people sold tech like Fugazi sold concert tickets. $5, for anyone. I don't know how that has anything to do with tech, but here I am.",
         "user_id": 5
     },
     {
-        "id": 7,
         "name": "Handlebars!",
         "content": "Handlebars is my favorite templating engine. It's just so good. Sooooooo good. So useful.",
         "user_id": 1

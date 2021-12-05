@@ -1,60 +1,50 @@
 [
     {
-        "id": 1,
         "body": "THEY'RE MINERALS JESUS",
         "user_id": 4,
         "proj_id": 5
     },
     {
-        "id": 2,
         "body": "Shut up, bitch. I'm waiting for you in hell.",
         "user_id": 7,
         "proj_id": 1
     },
     {
-        "id": 3,
         "body": "Seriously, dude. Bad take.",
         "user_id": 6,
         "proj_id": 1
     },
     {
-        "id": 4,
         "body": "Straight up",
         "user_id": 1,
         "proj_id": 6
     },
     {
-        "id": 5,
         "body": "I'll charge as much as I goddamn want. And you'll pay it anyway.",
         "user_id": 7,
         "proj_id": 6
     },
     {
-        "id": 6,
         "body": "Could you please elaborate a little more? Isn't this a tech blog?",
         "user_id": 2,
         "proj_id": 3
     },
     {
-        "id": 7,
         "body": "POST ABOUT TECH NOBODY CARES",
         "user_id": 2,
         "proj_id": 4
     },
     {
-        "id": 8,
         "body": "based",
         "user_id": 1,
         "proj_id": 2
     },
     {
-        "id": 9,
         "body": "No it's not. Use React.",
         "user_id": 6,
         "proj_id": 7
     },
     {
-        "id": 10,
         "body": "his book is pretty good i guess",
         "user_id": 3,
         "proj_id": 2
