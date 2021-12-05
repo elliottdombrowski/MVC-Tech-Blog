@@ -1,10 +1,12 @@
 <section class="profile-page">
 {{> profile-partial}}
+<div class="mypost-wrapper">
     {{#each posts}}
     <div class="profile-user-info">
-        <p>{{name}}</p>
-        <p>{{content}}</p>
+        <h2 class="post-body">{{name}}</h2>
+        <p class="my-post-content">{{content}}</p>
         <p>{{format_date date_created}}</p>
     </div>
     {{/each}}
+</div>
 </section>
