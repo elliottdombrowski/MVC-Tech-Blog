@@ -4,7 +4,6 @@ require('dotenv').config();
 
 let sequelize;
 
-//COMMENTING SO I CAN COMMIT TO HEROKU. 
 if (process.env.JAWSDB_URL) {
     sequelize = new Sequelize(process.env.JAWSDB_URL);
 } else {
