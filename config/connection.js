@@ -1,7 +1,6 @@
 //REQUIRE SEQUELIZE
 const Sequelize = require('sequelize');
 require('dotenv').config();
-//HEROKU FUCKING BLOWWWWS
 let sequelize;
 
 if (process.env.JAWSDB_URL) {
